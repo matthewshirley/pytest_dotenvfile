@@ -6,17 +6,16 @@ from dotenv import load_dotenv
 def pytest_addoption(parser):
     parser.addoption(
         "--env-file",
-        action="store",
-        dest="env_file",
         type=str,
-        help="Path to the env file to laad",
+        dest="env_file",
+        help="The path to the env file to load",
     )
 
     parser.addoption(
         "--override-system-env",
-        dest="override_system_env",
         type=bool,
-        help="Overrides existing system variables with loaded variables",
+        dest="override_system_env",
+        help="Whether dotenv should override existing system variables",
     )
 
 
